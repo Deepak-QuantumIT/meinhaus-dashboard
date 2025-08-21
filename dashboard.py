@@ -35,9 +35,9 @@ def login():
             else:
                 st.error("Invalid username or password")
 
-# if "authenticated" not in st.session_state or not st.session_state.authenticated:
-#     login()
-#     st.stop()
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    login()
+    st.stop()
 
 
 with st.sidebar:
@@ -51,3 +51,4 @@ with st.sidebar:
 
 if st.session_state.page == "chatbot":
     render_chatbot_page()
+
